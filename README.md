@@ -128,6 +128,28 @@ npx react-native start
 
 ---
 
+## 11. Install Chrome Browser
+```bash
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb
+```
+---
+
+## 12. Install VS Code
+```bash
+sudo apt update
+sudo apt install -y wget gpg
+
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
+
+sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+
+sudo apt update
+sudo apt install code
+```
+---
+
 ## Troubleshooting Tips
 
 - If build fails with `SDK location not found`:
